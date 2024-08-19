@@ -1,9 +1,10 @@
 // src/router/index.js
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import Home from '@/views/Homeview.vue';
-import About from '@/views/Aboutview.vue';
-import Contact from '@/views/Contact.vue';
+import Home from '@/views/HomeView.vue';
+import About from '@/views/AboutView.vue';
+import Contact from '@/views/ContactView.vue';
+
 
 Vue.use(VueRouter);
 
