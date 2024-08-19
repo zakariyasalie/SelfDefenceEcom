@@ -4,8 +4,8 @@ import VueRouter from 'vue-router';
 import Home from '@/views/HomeView.vue';
 import About from '@/views/AboutView.vue';
 import Contact from '@/views/ContactView.vue';
-
-
+import Admin from '@/views/AdminView.vue';
+import Products from '@/views/ProductsView.vue';
 Vue.use(VueRouter);
 
 const routes = [
