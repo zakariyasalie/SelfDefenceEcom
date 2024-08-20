@@ -1,25 +1,52 @@
-<!-- src/components/Footer.vue -->
 <template>
     <footer>
-      <p>&copy; 2024 My Project</p>
+      <a href="#" @click="scrollToTop">&copy; {{ currentYear }} EmpowerGear</a>
+      <a href="https://github.com/zakariyasalie" target="_blank" class="github-icon">
+        <i class="fab fa-github"></i>
+      </a>
     </footer>
   </template>
   
   <script>
   export default {
-    name: 'Footer',
-  };
+    name: 'FooterComp',
+    data() {
+      return {
+        currentYear: new Date().getFullYear()
+      }
+    },
+    methods: {
+      scrollToTop() {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      }
+    }
+  }
   </script>
   
   <style scoped>
   footer {
-    background-color: #333;
-    color: white;
     text-align: center;
-    padding: 20px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    padding: 1rem;
+    background-color: #2c3e50;
+    color: white;
+  }
+  
+  footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px; /* Add margin between text and icon */
+  }
+  
+  footer a:hover {
+    color: #1abc9c;
+  }
+  
+  .github-icon {
+    font-size: 1.5rem; /* Adjust icon size */
+    margin-left: 10px; /* Adjust spacing */
   }
   </style>
   
